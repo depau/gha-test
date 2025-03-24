@@ -37,7 +37,7 @@ jobs:
           echo
           echo
           echo "virt-host-validate:"
-          virt-host-validate
+          sudo virt-host-validate || true
           echo
           echo
           printenv
