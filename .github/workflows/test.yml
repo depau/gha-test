@@ -43,4 +43,21 @@ jobs:
           printenv
           echo
           echo
+          echo "/etc/os-release"
           cat /etc/os-release
+          echo
+          echo
+          which qemu-system-x86_64
+          qemu-system-x86_64 --version
+          echo
+          echo
+          echo "qemu help"
+          qemu-system-x86_64 --help
+          echo
+          echo
+          echo "qemu supported devices"
+          qemu-system-x86_64 -device help
+          echo
+          echo "qemu supported cpus"
+          qemu-system-x86_64 -cpu help
+          
