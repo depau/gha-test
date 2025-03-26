@@ -33,7 +33,7 @@ jobs:
           cat /proc/cpuinfo
           echo
           echo
-          sudo apt install -y libvirt-clients
+          sudo apt install -y --no-install-recommends libvirt-clients qemu-system-x86 qemu-utils ovmf
           echo
           echo
           echo "virt-host-validate:"
@@ -42,6 +42,9 @@ jobs:
           echo
           printenv
           echo
+          echo
+          echo "/dev/kvm:"
+          ls -lah /dev/kvm
           echo
           echo "/etc/os-release"
           cat /etc/os-release
